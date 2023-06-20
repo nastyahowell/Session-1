@@ -1,0 +1,16 @@
+﻿@model vstrechashop.ViewModels.SmallCartViewModel
+
+@if (Model != null)
+{
+    <p>Товаров в корзине: <span class="badge badge-primary">@Model.NumberOfItems</span></p>
+    <p>Общая сумма: <b>@Model.TotalAmount.ToString("C2")</b></p>
+    <a class="btn btn-primary" asp-controller="Cart" asp-action="Index">Перейти в корзину</a>
+    <a class="btn btn-danger" asp-controller="Cart" asp-action="Clear">Очистить корзину</a>
+}
+else
+{
+    <p class="lead m-0">Коризна пуста</p>
+}
+
+
+

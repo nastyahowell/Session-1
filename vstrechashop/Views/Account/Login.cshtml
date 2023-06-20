@@ -1,0 +1,33 @@
+﻿@model vstrechashop.ViewModels.LoginViewModel
+
+<body>
+    <h2>Вход</h2>
+    <form method="post" asp-controller="Account" asp-action="Login"
+          asp-route-returnUrl="Index">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <label asp-for="Email"></label><br />
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label><br />
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <label asp-for="RememberMe"></label><br />
+            <input asp-for="RememberMe" />
+        </div>
+        <div>
+            <input type="submit" value="Войти" />
+        </div>
+
+        <br>
+        <div class="form-group">
+            <h5>Нет аккаунта?</h5>
+            <a class="btn btn-success" asp-controller="Account" asp-action="Register">Регистрация</a>
+        </div>
+    </form>
+
+</body>
